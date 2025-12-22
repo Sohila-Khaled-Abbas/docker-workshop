@@ -5,4 +5,9 @@ print("arguments", sys.argv)
 
 month = int(sys.argv[1])
 
-print(f"Processing data for month, month={month}")
+
+df = pd.DataFrame({"day": [1, 2], "num_passengers": [3, 4]})
+df["month"] = month
+print(df.head())
+
+print(f"Pipeline executed for month: {month}")
